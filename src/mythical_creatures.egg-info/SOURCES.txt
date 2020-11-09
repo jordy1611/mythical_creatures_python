@@ -1,0 +1,11 @@
+setup.py
+src/mythical_creatures/__init__.py
+src/mythical_creatures/centaur.py
+src/mythical_creatures/ogre.py
+src/mythical_creatures/pirate.py
+src/mythical_creatures/unicorn.py
+src/mythical_creatures.egg-info/PKG-INFO
+src/mythical_creatures.egg-info/SOURCES.txt
+src/mythical_creatures.egg-info/dependency_links.txt
+src/mythical_creatures.egg-info/requires.txt
+src/mythical_creatures.egg-info/top_level.txt
