@@ -26,6 +26,3 @@
 * [Originally in JS](https://github.com/turingschool-examples/javascript-foundations/tree/main/mythical-creatures)
 * [Kathy Bui](https://github.com/kathybui732) changed to python
 * [Jordan Shryock, me](https://github.com/jordy1611)
-
-
-
