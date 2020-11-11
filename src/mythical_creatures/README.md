@@ -13,6 +13,14 @@
 
 * `python3 -m pytest tests/mythical_creatures/whatever_test.py` to run test
 
+### Order
+
+1. unicorn
+2. pirate
+3. centaur
+4. direwolf
+5. ogre
+
 ### Contributors
 
 * [Originally in JS](https://github.com/turingschool-examples/javascript-foundations/tree/main/mythical-creatures)

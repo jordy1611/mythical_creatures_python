@@ -4,9 +4,10 @@ class Unicorn:
         self.color = color
 
     def is_white(self):
-        # return self.color == 'white'
-        is_it_white = (False, True)[self.color == 'white']
-        return is_it_white
+        return self.color == 'white'
+
+        # return (False, True)[self.color == 'white']
+
         # if self.color == 'white':
         #     return True
         # else:
@@ -14,3 +15,4 @@ class Unicorn:
 
     def say(self, text):
         return f"**;* {text} *;**"
+        # return '**;* ' + str(text) + ' *;**'
