@@ -31,4 +31,4 @@ def test_it_returns_false_if_not_white():
 
 
 def test_it_says_sparkly_stuff(unicorn):
-    assert unicorn.say('Hello, World') == '**;* Hello, World **;*'
+    assert unicorn.say('Hello, World') == '**;* Hello, World *;**'
