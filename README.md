@@ -18,7 +18,7 @@
 1. unicorn
 2. pirate
 3. centaur
-4. direwolf
+4. direwolf (has bugs)
 5. ogre
 
 ### Contributors
