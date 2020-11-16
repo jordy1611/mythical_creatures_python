@@ -5,6 +5,10 @@ class Direwolf:
         self.size = size
         self.starks_to_protect = []
 
+    def protects(self, person):
+        if self.home == person.location:
+            self.starks_to_protect.append(person)
+
 
 class Stark:
     def __init__(self, name, location = 'Winterfell', home = 'Winterfell'):

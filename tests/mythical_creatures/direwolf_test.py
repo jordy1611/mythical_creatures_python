@@ -54,26 +54,26 @@ def test_starts_off_with_no_Starks_to_protect(direwolf):
     assert direwolf.home == 'Beyond the Wall'
 
 
-# def test_protects_stark_kids():
-#     wolf = Direwolf('Nymeria', 'Riverlands')
-#     stark = Stark('Arya', 'Riverlands')
+def test_protects_stark_kids():
+    wolf = Direwolf('Nymeria', 'Riverlands')
+    stark = Stark('Arya', 'Riverlands')
 
-#     wolf.protects(stark)
+    wolf.protects(stark)
 
-#     assert wolf.starks_to_protect[0].name == 'Arya'
-#     assert stark.location == 'Riverlands'
-#     assert wolf.home == 'Riverlands'
+    assert wolf.starks_to_protect[0].name == 'Arya'
+    assert stark.location == 'Riverlands'
+    assert wolf.home == 'Riverlands'
 
 
-# def test_can_only_protect_stark_kids_if_home_and_location_match():
-#     wolf = Direwolf('Ghost')
-#     stark = Stark('John', "King's Landing")
+def test_can_only_protect_stark_kids_if_home_and_location_match():
+    wolf = Direwolf('Ghost')
+    stark = Stark('John', "King's Landing")
 
-#     wolf.protects(stark)
+    wolf.protects(stark)
 
-#     assert wolf.home == 'Beyond the Wall'
-#     assert stark.location == "King's Landing"
-#     assert wolf.starks_to_protect == []
+    assert wolf.home == 'Beyond the Wall'
+    assert stark.location == "King's Landing"
+    assert wolf.starks_to_protect == []
 
 
 # def test_direwolf_can_only_protect_two_starks_at_a_time():
