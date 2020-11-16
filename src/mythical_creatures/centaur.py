@@ -5,20 +5,16 @@ class Centaur():
         self.cranky_counter = 0
         self.cranky = self.cranky_counter >= 2
         self.standing = True
+        self.sick = False
 
     def shoot(self):
         self.cranky_counter += 1
-        print('cranky test before1', self.cranky_counter)
         self.cranky = self.cranky_counter > 2
-        print('cranky test after1', self.cranky_counter)
         return ('NO!', 'Twang!!!')[not self.cranky and self.standing]
 
     def run(self):
         self.cranky_counter += 1
-        print('cranky test before2', self.cranky_counter)
         self.cranky = self.cranky_counter > 2
-        print('cranky test after2', self.cranky_counter)
-        # print('run counter', self.cranky_counter, 'cranky', self.cranky, 'standing', self.standing)
         return ('NO!', 'Clop clop clop clop!!!')[not self.cranky and self.standing]
 
     def is_cranky(self):
@@ -43,3 +39,16 @@ class Centaur():
 
     def stand_up(self):
         self.standing = True
+
+    def drink_potion(self):
+        if self.cranky and self.standing:
+            self.cranky_counter = 0
+            self.cranky = False
+        elif not self.cranky:
+            self.sick = True
+
+    def is_rested(self):
+        return not self.cranky
+    
+    def is_sick(self):
+        return self.sick
