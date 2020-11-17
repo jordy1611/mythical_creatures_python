@@ -9,7 +9,6 @@
 * `source env/bin/activate` to get virtual environment running
 * If you don't have pytest:
   *  `pip3 install pytest` or
-  * `python -m pytest tests/mythical_creatures/unicorn_test`
 
 * `python3 -m pytest tests/mythical_creatures/whatever_test.py` to run test
 
