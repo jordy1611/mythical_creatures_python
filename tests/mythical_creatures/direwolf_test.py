@@ -121,47 +121,47 @@ def test_protected_status_changes_once_protected():
     assert sansa_stark.is_safe() == False
 
 
-# def test_hunts_white_walkers():
-#     wolf = Direwolf('Nymeria', 'Winterfell')
+def test_hunts_white_walkers():
+    wolf = Direwolf('Nymeria', 'Winterfell')
 
-#     assert wolf.hunts_white_walkers == True
-
-
-# def test_hunts_white_walkers_but_not_if_protecting_starks():
-#     wolf = Direwolf('Nymeria', 'Winterfell')
-#     stark = Stark('Sansa')
-
-#     wolf.protects(stark)
-#     wolf.hunts_white_walkers == False
+    assert wolf.hunts_white_walkers == True
 
 
-# def test_wolves_can_leave_and_stop_protecting_starks():
-#     summer_wolf = Direwolf('Summer', 'Winterfell')
-#     lady_wolf = Direwolf('Lady', 'Winterfell')
-#     sansa_stark = Stark('Sansa')
-#     arya_stark = Stark('Arya')
+def test_hunts_white_walkers_but_not_if_protecting_starks():
+    wolf = Direwolf('Nymeria', 'Winterfell')
+    stark = Stark('Sansa')
 
-#     summer_wolf.protects(arya_stark)
-#     lady_wolf.protects(sansa_stark)
-#     summer_wolf.leaves(arya_stark)
-
-#     assert summer_wolf.starks_to_protect == []
-#     assert lady_wolf.starks_to_protect[0].name == 'Sansa'
-#     assert type(lady_wolf.starks_to_protect) is list
-#     assert arya_stark.is_safe == False
+    wolf.protects(stark)
+    wolf.hunts_white_walkers == False
 
 
-# def test_if_stark_not_protected_when_direwolf_leaves_then_that_stark_is_the_return_value():
-#     summer_wolf = Direwolf('Summer', 'Winterfell')
-#     lady_wolf = Direwolf('Lady', 'Winterfell')
-#     sansa_stark = Stark('Sansa')
-#     arya_stark = Stark('Arya')
-#     rickon_stark = Stark('Rickon')
+def test_wolves_can_leave_and_stop_protecting_starks():
+    summer_wolf = Direwolf('Summer', 'Winterfell')
+    lady_wolf = Direwolf('Lady', 'Winterfell')
+    sansa_stark = Stark('Sansa')
+    arya_stark = Stark('Arya')
 
-#     summer_wolf.protects(arya_stark)
-#     lady_wolf.protects(sansa_stark)
-#     summer_wolf.leaves(arya_stark)
+    summer_wolf.protects(arya_stark)
+    lady_wolf.protects(sansa_stark)
+    summer_wolf.leaves(arya_stark)
 
-#     expected = lady_wolf.leaves(rickon_stark)
+    assert summer_wolf.starks_to_protect == []
+    assert lady_wolf.starks_to_protect[0].name == 'Sansa'
+    assert type(lady_wolf.starks_to_protect) is list
+    assert arya_stark.is_safe() == False
 
-#     assert expected.name == 'Rickon'
+
+def test_if_stark_not_protected_when_direwolf_leaves_then_that_stark_is_the_return_value():
+    summer_wolf = Direwolf('Summer', 'Winterfell')
+    lady_wolf = Direwolf('Lady', 'Winterfell')
+    sansa_stark = Stark('Sansa')
+    arya_stark = Stark('Arya')
+    rickon_stark = Stark('Rickon')
+
+    summer_wolf.protects(arya_stark)
+    lady_wolf.protects(sansa_stark)
+    summer_wolf.leaves(arya_stark)
+
+    expected = lady_wolf.leaves(sansa_stark)
+
+    assert expected.name == 'Sansa'
