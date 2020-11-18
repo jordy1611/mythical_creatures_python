@@ -76,51 +76,49 @@ def test_can_only_protect_stark_kids_if_home_and_location_match():
     assert wolf.starks_to_protect == []
 
 
-# def test_direwolf_can_only_protect_two_starks_at_a_time():
-#     summer_wolf = Direwolf('Summer', 'Winterfell')
-#     lady_wolf = Direwolf('Lady', 'Winterfell')
-#     sansa_stark = Stark('Sansa')
-#     john_stark = Stark('John')
-#     rob_stark = Stark('Rob')
-#     bran_stark = Stark('Bran')
-#     arya_stark = Stark('Arya')
+def test_direwolf_can_only_protect_two_starks_at_a_time():
+    summer_wolf = Direwolf('Summer', 'Winterfell')
+    lady_wolf = Direwolf('Lady', 'Winterfell')
+    sansa_stark = Stark('Sansa')
+    john_stark = Stark('John')
+    rob_stark = Stark('Rob')
+    bran_stark = Stark('Bran')
+    arya_stark = Stark('Arya')
 
-#     summer_wolf.protects(sansa_stark)
-#     summer_wolf.protects(john_stark)
-#     lady_wolf.protects(rob_stark)
-#     lady_wolf.protects(bran_stark)
-#     lady_wolf.protects(arya_stark)
+    summer_wolf.protects(sansa_stark)
+    summer_wolf.protects(john_stark)
+    lady_wolf.protects(rob_stark)
+    lady_wolf.protects(bran_stark)
+    lady_wolf.protects(arya_stark)
 
-#     assert summer_wolf.starks_to_protect[0] == sansa_stark
-#     assert summer_wolf.starks_to_protect[1] == john_stark
-#     assert lady_wolf.starks_to_protect[0] == rob_stark
-#     assert lady_wolf.starks_to_protect[1] == bran_stark
-#     assert lady_wolf.starks_to_protect[0] != arya_stark
-#     assert lady_wolf.starks_to_protect[1] != arya_stark
-
-
-# def test_starks_start_off_unsafe():
-#     stark = Stark('John', 'The Wall')
-
-#     assert stark.is_safe() == False
+    assert summer_wolf.starks_to_protect[0] == sansa_stark
+    assert summer_wolf.starks_to_protect[1] == john_stark
+    assert lady_wolf.starks_to_protect[0] == rob_stark
+    assert lady_wolf.starks_to_protect[1] == bran_stark
+    assert lady_wolf.starks_to_protect[0] != arya_stark
+    assert lady_wolf.starks_to_protect[1] != arya_stark
 
 
-# def test_default_house_words():
-#     stark = Stark('John', 'The Wall')
-#     assert stark.house_words == 'Winter is Coming'
+def test_starks_start_off_unsafe():
+    stark = Stark('John', 'The Wall')
+
+    assert stark.is_safe() == False
 
 
-# def test_protected_status_changes_once_protected():
-#     wolf = Direwolf('Nymeria', 'Winterfell')
-#     arya_stark = Stark('Arya')
-#     sansa_stark = Stark('Sansa')
+def test_default_house_words():
+    stark = Stark('John', 'The Wall')
+    assert stark.house_words == 'Winter is Coming'
 
-#     wolf.protects(arya_stark)
 
-#     assert arya_stark.is_safe == True
-#     assert sansa_stark.is_safe == False
-#     assert arya_stark.house_words == 'The North Remembers'
-#     assert sansa_stark.house_words == 'Winter is Coming'
+def test_protected_status_changes_once_protected():
+    wolf = Direwolf('Nymeria', 'Winterfell')
+    arya_stark = Stark('Arya')
+    sansa_stark = Stark('Sansa')
+
+    wolf.protects(arya_stark)
+
+    assert arya_stark.is_safe() == True
+    assert sansa_stark.is_safe() == False
 
 
 # def test_hunts_white_walkers():
